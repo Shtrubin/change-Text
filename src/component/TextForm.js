@@ -7,17 +7,32 @@ export default function TextForm(props) {
         SetText(newText);
     }
 
+    const handleLoClick=()=>{
+        let newText= text.toLowerCase();
+        SetText(newText);
+    }
+
     const handelonChange=(event)=>{
         SetText(event.target.value);
     }
     const[text,SetText]= useState('Enter the  text now');
   return (
-    <div>
+    <>
+    <div className="Container">  
         <h1>{props.heading}</h1>
         <div className="mb-3">
             <textarea className="form-control" value={text} onChange={handelonChange} id="exampleFormControlTextarea1" rows="8"></textarea>
         </div>
-        <button type="button" onClick={handleUpClick} className="btn btn-primary">UpperCase</button>
+        <button type="button" onClick={handleUpClick} className="btn btn-primary mx-2">UpperCase</button>
+        <button type="button" onClick={handleLoClick} className="btn btn-primary mx-2">LowerCase</button>
     </div>
+    <div className="container">
+        <h2>Text Summary</h2>
+        <p>The text have {text.split(" ").length} word and {text.length} characters</p>
+        <p>Time it takes to read {0.002*text.split(" ").length}</p>
+    </div>
+    <h3>TEXT PREVIEW</h3>
+    <p>{text}</p>
+    </>
   )
 }
