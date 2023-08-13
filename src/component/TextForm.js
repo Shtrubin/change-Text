@@ -5,13 +5,21 @@ export default function TextForm(props) {
     const handleUpClick=()=>{
         let newText= text.toUpperCase();
         SetText(newText);
+
     }
 
     const handleLoClick=()=>{
         let newText= text.toLowerCase();
         SetText(newText);
     }
-
+    const handleClearClick=()=>{
+        let newText=(" ")
+        SetText(newText);
+    }
+    const handleRevClick=()=>{
+        let newText= text.split('').reverse().join('');
+        SetText(newText);
+    }
     const handelonChange=(event)=>{
         SetText(event.target.value);
     }
@@ -25,6 +33,9 @@ export default function TextForm(props) {
         </div>
         <button type="button" onClick={handleUpClick} className="btn btn-primary mx-2">UpperCase</button>
         <button type="button" onClick={handleLoClick} className="btn btn-primary mx-2">LowerCase</button>
+        <button type="button" onClick={handleClearClick} className="btn btn-primary mx-2">Clear</button>
+        <button type="button" onClick={handleRevClick} className="btn btn-primary mx-2">Reverse</button>
+
     </div>
     <div className="container">
         <h2>Text Summary</h2>
