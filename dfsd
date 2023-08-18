@@ -1,0 +1,17 @@
+[33mcommit 5ec2b86ea87f8d98c9b1ad0cb76f83d063892072[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Rubin <rubeensht17@gmail.com>
+Date:   Sun Aug 13 15:44:42 2023 -0700
+
+    add the dark and light mode
+
+[33mcommit 2cb8756c0337ab01459e7f022e5231cd0211db90[m
+Author: Rubin <rubeensht17@gmail.com>
+Date:   Fri Aug 11 18:22:43 2023 -0700
+
+    second  commit- added lowercase convertor and some extra functionality lilike wordcount text preview
+
+[33mcommit 8b004b24258c1d7135bf2271e3d0e525a7452e74[m
+Author: Rubin <rubeensht17@gmail.com>
+Date:   Fri Aug 11 17:48:38 2023 -0700
+
+    first commit- added uppercase functionality and many more  to come
