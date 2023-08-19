@@ -4,35 +4,41 @@ import React from 'react'
 export default function TextForm(props) {
     const handleUpClick=()=>{
         let newText= text.toUpperCase();
-        SetText(newText);
+        SetText(newText)
+        props.showAlert("Converted to UpperCase","success");
 
     }
 
     const handleLoClick=()=>{
         let newText= text.toLowerCase();
-        SetText(newText);
+        SetText(newText)
+        props.showAlert("Converted to LowerCase","success");
     }
     const handleClearClick=()=>{
         let newText=(" ")
         SetText(newText);
+        props.showAlert("Cleared","success");
     }
     const handleRevClick=()=>{
         let newText= text.split('').reverse().join('');
         SetText(newText);
+        props.showAlert("Text has been reversed","success");
     }
     const handleCopyClick=()=>{
     var text= document.getElementById("exampleFormControlTextarea1");
        text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Succesfully Copied","success");
     }
     const handleSpaceClick=()=>{
         let newtext= text.split(/[ ]+/);
         SetText(newtext.join(" "))
+        props.showAlert("Removed Extra Spaces","success");
     }
     const handelonChange=(event)=>{
         SetText(event.target.value);
     }
-    const[text,SetText]= useState('Enter the  text now');
+    const[text,SetText]= useState('');
   return (
     <>
     <div style= {{color: props.mode==='dark'?'white': 'black'}} className="Container">  
